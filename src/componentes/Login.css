@@ -1,0 +1,139 @@
+.input-group input::placeholder {
+  color: #9ca3af;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #422F71;
+}
+
+.remember-me input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 3px;
+  margin-right: 6px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.remember-me input[type="checkbox"]:checked + .checkmark {
+  background: #553C9A;
+  border-color: #553C9A;
+}
+
+.remember-me input[type="checkbox"]:checked + .checkmark::after {
+  content: '✓';
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 10px;
+  top: -2px;
+  left: 1px;
+}
+
+.forgot-password {
+  color: #553C9A;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  color: #422F71;
+}
+
+.sign-in-btn {
+  background: linear-gradient(135deg, #6B46C1 0%, #553C9A 50%, #422F71 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Montserrat', Arial, sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+  box-shadow: 0 4px 15px rgba(85, 60, 154, 0.3);
+}
+
+.sign-in-btn:hover {
+  background: linear-gradient(135deg, #553C9A 0%, #422F71 50%, #2A1B3D 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(85, 60, 154, 0.4);
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #422F71;
+}
+
+.create-account {
+  color: #553C9A;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.create-account:hover {
+  text-decoration: underline;
+  color: #422F71;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+  
+  .login-container {
+    flex-direction: column;
+    height: calc(100vh - 20px);
+    margin: 10px;
+    border-radius: 15px;
+  }
+  
+  .left-panel {
+    padding: 30px 25px;
+    min-height: 250px;
+  }
+  
+  .welcome-title {
+    font-size: 1.8rem;
+  }
+  
+  .welcome-description {
+    font-size: 0.9rem;
+  }
+  
+  .right-panel {
+    padding: 30px 25px;
+  }
+  
+  .form-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .form-container {
+    max-width: 100%;
+  }
+}

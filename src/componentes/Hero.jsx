@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function HeroSection() {
     return (
       <section className="hero">
@@ -35,19 +37,13 @@ export default function HeroSection() {
             </p>
   
             <div className="hero-buttons">
-              <button
-                className="btn-primary"
-                onClick={() => (window.location.href = "contratar.html")}
-              >
+              <Link to="/contratar" className="btn-primary">
                 MONTAR EQUIPE <span className="btn-icon">→</span>
-              </button>
-  
-              <button
-                className="btn-secondary"
-                onClick={() => (window.location.href = "skillpods.html")}
-              >
+              </Link>
+
+              <Link to="/skillpods" className="btn-secondary">
                 VER SKILL PODS
-              </button>
+              </Link>
             </div>
   
             <div className="hero-stats">

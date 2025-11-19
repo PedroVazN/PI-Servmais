@@ -15,8 +15,8 @@ export default function Header() {
           </nav>
   
           <div className="header-actions">
-            <a href="/login.html" className="btn-link">ENTRAR</a>
-            <a href="/cadastro.html" className="btn-cadastro">CADASTRE-SE</a>
+            <Link to="/login" className="btn-cadastro">ENTRAR</Link>
+            <Link to="/cadastro" className="btn-cadastro">CADASTRE-SE</Link>
           </div>
         </div>
       </header>
