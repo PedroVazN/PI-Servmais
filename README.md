@@ -1,70 +1,259 @@
-# Getting Started with Create React App
+# 🎯 SERV+ - Plataforma de Skill Pods
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Plataforma para contratação de freelancers individuais e Skill Pods (equipes modulares de 2-4 profissionais complementares).
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📋 Índice
 
-### `npm start`
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação](#instalação)
+- [Estrutura CSS](#estrutura-css)
+- [Rotas](#rotas)
+- [Componentes](#componentes)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Sobre o Projeto
 
-### `npm test`
+**SERV+** é uma plataforma inovadora que conecta empresas e clientes a profissionais qualificados, oferecendo duas modalidades de contratação:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Freelancers**: Profissionais individuais para tarefas específicas
+- **Skill Pods**: Equipes modulares pré-selecionadas para projetos completos
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Estrutura do Projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+PI-Servmais/
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── ...
+├── src/
+│   ├── Assets/          # Imagens e SVGs
+│   ├── componentes/     # Componentes React
+│   │   ├── Header.jsx / .css
+│   │   ├── Hero.jsx / .css
+│   │   ├── DateTimeOverlay.jsx / .css
+│   │   ├── Login.jsx / .css
+│   │   ├── Cadastro.jsx / .css
+│   │   ├── Servico.jsx / .css
+│   │   ├── Skillpods.jsx / .css
+│   │   ├── Monstarequipe.jsx / .css
+│   │   ├── Administrativo.jsx / .css
+│   │   └── Footer.jsx / .css
+│   ├── App.js           # Componente principal e rotas
+│   ├── App.css          # Estilos globais
+│   ├── index.js         # Ponto de entrada
+│   └── index.css        # Reset CSS global
+├── package.json
+└── README.md
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Tecnologias Utilizadas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React** 18.x
+- **React Router DOM** (navegação entre páginas)
+- **CSS3** (estilização modular)
+- **JavaScript ES6+**
+- **Create React App**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📦 Instalação
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Pré-requisitos
 
-## Learn More
+- Node.js 14+ instalado
+- npm ou yarn
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Passos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Clone o repositório**
+   ```bash
+   git clone <url-do-repositorio>
+   cd PI-Servmais
+   ```
 
-### Code Splitting
+2. **Instale as dependências**
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. **Inicie o servidor de desenvolvimento**
+   ```bash
+   npm start
+   # ou
+   yarn start
+   ```
 
-### Analyzing the Bundle Size
+4. **Acesse no navegador**
+   ```
+   http://localhost:3000
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🎨 Estrutura CSS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+A estrutura CSS foi completamente reorganizada para ser modular e escalável:
 
-### Advanced Configuration
+- **`index.css`**: Reset global
+- **`App.css`**: Estilos globais compartilhados
+- **Componentes/\*.css**: Estilos específicos de cada componente
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Para mais detalhes, consulte [ESTRUTURA-CSS.md](./ESTRUTURA-CSS.md)
 
-### Deployment
+### Padrão de Cores
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```css
+/* Paleta de Cores Principal */
+--roxo-escuro: #2A1B3D;
+--roxo-medio: #422F71;
+--roxo-claro: #553C9A;
+--roxo-destaque: #6B46C1;
+--branco: #FFFFFF;
+```
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🗺️ Rotas
+
+| Rota | Componente | Descrição |
+|------|-----------|-----------|
+| `/` | Hero + DateTimeOverlay | Página inicial |
+| `/login` | Login | Página de login |
+| `/cadastro` | Cadastro | Página de cadastro |
+| `/servico` | Servico | Lista de freelancers |
+| `/skillpods` | Skillpods | Lista de Skill Pods |
+| `/contratar` | Monstarequipe | Montagem de equipe |
+| `/adm` | Administrativo | Área administrativa |
+
+---
+
+## 🧩 Componentes
+
+### Header
+- Navegação principal
+- Logo
+- Botões de ação (Login/Cadastro)
+- Menu mobile responsivo
+
+### Hero
+- Banner principal
+- Call-to-action
+- Estatísticas
+- Vídeo demonstrativo
+
+### DateTimeOverlay
+- Widget de data/hora
+- Posicionamento fixo
+
+### Login
+- Formulário de login
+- Validação
+- Links de recuperação
+
+### Cadastro
+- Formulário de cadastro
+- Seleção de tipo de conta (Usuário/Freelancer)
+- Campos dinâmicos
+
+### Servico
+- Grid de freelancers
+- Cards informativos
+- Footer
+
+### Skillpods
+- Grid de Skill Pods
+- Informações das equipes
+- Footer
+
+### Monstarequipe
+- Carrossel de Skill Pods
+- Cards de serviços
+- Comparativo Freelancers vs Skill Pods
+- Popup de detalhes
+
+### Administrativo
+- Cards administrativos
+- Links para áreas específicas
+
+### Footer
+- Links rápidos
+- Informações de contato
+- Copyright
+
+---
+
+## 📱 Responsividade
+
+O projeto é totalmente responsivo com breakpoints para:
+
+- **Mobile**: < 480px
+- **Tablet**: < 768px
+- **Desktop**: < 1024px
+- **Large Desktop**: > 1024px
+
+---
+
+## 🔄 Scripts Disponíveis
+
+```bash
+# Inicia o servidor de desenvolvimento
+npm start
+
+# Cria build de produção
+npm run build
+
+# Executa testes
+npm test
+
+# Ejeta as configurações (irreversível)
+npm run eject
+```
+
+---
+
+## 📝 Próximos Passos
+
+- [ ] Integração com backend/API
+- [ ] Autenticação e autorização
+- [ ] Sistema de pagamentos
+- [ ] Chat em tempo real
+- [ ] Sistema de avaliações
+- [ ] Filtros avançados
+- [ ] Dashboard de métricas
+- [ ] Modo escuro
+
+---
+
+## 👥 Equipe
+
+Desenvolvido por estudantes do curso de Análise e Desenvolvimento de Sistemas
+
+---
+
+## 📄 Licença
+
+Este projeto é privado e de uso acadêmico.
+
+---
+
+## 📞 Contato
+
+- Email: servmais@gmail.com
+- Telefone: (11) 99999-9999
+
+---
+
+**Última atualização**: Novembro 202
+
