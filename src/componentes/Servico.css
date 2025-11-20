@@ -1,6 +1,36 @@
-
-
 /* ------ Estilos Específicos para a Landing de Freelancers ------ */
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  position: relative;
+  padding-top: 112px;
+}
+
+/* Seção de título */
+.title-section {
+  text-align: center;
+  padding: 60px 0 40px 0;
+  position: relative;
+  z-index: 5;
+  background: #FFFFFF;
+}
+
+.title-section h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #2d3436 0%, #422F71 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title-section p {
+  font-size: 1.2rem;
+  color: #636e72;
+}
 
 /* Menu Mobile */
 .menu-toggle-checkbox {
@@ -189,31 +219,6 @@
   display: block;
 }
 
-/* Seção de título */
-.title-section {
-  text-align: center;
-  padding: 60px 0 40px 0;
-  position: relative;
-  z-index: 5;
-  background: #FFFFFF;
-}
-
-.title-section h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #2d3436;
-  margin-bottom: 15px;
-  background: linear-gradient(135deg, #2d3436 0%, #422F71 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.title-section p {
-  font-size: 1.2rem;
-  color: #636e72;
-}
-
 /* Seção de Freelancers */
 .freelancers-section {
   position: relative;
@@ -400,15 +405,3 @@
   color: #fff;
 }
 
-.title-section h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 15px;
-  
-  font-family: 'Montserrat', sans-serif !important;
-
-  background: linear-gradient(135deg, #2d3436 0%, #422F71 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}

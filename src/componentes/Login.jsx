@@ -1,11 +1,20 @@
-import { Link } from "react-router-dom";
-import "./Login.css"; // ajuste o caminho conforme sua pasta
+import { Link, useNavigate } from "react-router-dom";
+import "./Login.css";
 
 export default function Login() {
+    const navigate = useNavigate();
+
     return (
-        <div className="login-container">
-            {/* Painel lateral esquerdo */}
-            <div className="left-panel">
+        <div className="login-page-wrapper">
+            {/* Botão Voltar */}
+            <button className="back-button" onClick={() => navigate('/')}>
+                <span className="back-arrow">←</span>
+                Voltar
+            </button>
+
+            <div className="login-container">
+                {/* Painel lateral esquerdo */}
+                <div className="left-panel">
                 <div className="logo-section">
                     <div className="logo">SERV+</div>
                 </div>
@@ -62,6 +71,7 @@ export default function Login() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

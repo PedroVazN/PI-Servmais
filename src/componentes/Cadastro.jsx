@@ -1,15 +1,24 @@
 import { useState } from "react";
-import '../componentes/Cadastro.css'; 
+import { useNavigate } from "react-router-dom";
+import './Cadastro.css'; 
 
 export default function Cadastro() {
   const [tipoConta, setTipoConta] = useState("");
+  const navigate = useNavigate();
 
   const trocarTipo = (e) => {
     setTipoConta(e.target.value);
   };
 
   return (
-    <div className="login-container">
+    <div className="login-page-wrapper">
+      {/* Botão Voltar */}
+      <button className="back-button" onClick={() => navigate('/')}>
+        <span className="back-arrow">←</span>
+        Voltar
+      </button>
+
+      <div className="login-container">
       {/* Painel lateral esquerdo */}
       <div className="left-panel">
         <div className="logo-section">
@@ -90,6 +99,7 @@ export default function Cadastro() {
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 }

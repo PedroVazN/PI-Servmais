@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import './App.css';
 
 import Header from './componentes/Header';
 import HeroSection from './componentes/Hero';
@@ -10,12 +11,13 @@ import Contratar from "./componentes/Monstarequipe";
 import Cadastro from "./componentes/Cadastro";
 import Login from "./componentes/Login";
 
+function Layout() {
+  const location = useLocation();
+  const hideHeader = location.pathname === '/login' || location.pathname === '/cadastro';
 
-export default function App() {
   return (
-    <BrowserRouter>
-      <Header />
-
+    <>
+      {!hideHeader && <Header />}
       <Routes>
         <Route path="/" element={
           <>
@@ -23,16 +25,21 @@ export default function App() {
             <DateTimeOverlay />
           </>
         } />
-
         <Route path="/adm" element={<Administrativo />} />
-
         <Route path="/servico" element={<Servico />} />
         <Route path="/skillpods" element={<Skillpods />} />
         <Route path="/contratar" element={<Contratar />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/login" element={<Login />} />
-
       </Routes>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Layout />
     </BrowserRouter>
   );
 }
