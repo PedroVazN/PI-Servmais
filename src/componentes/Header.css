@@ -1,0 +1,176 @@
+/* ===========================================================
+   HEADER DESKTOP (NADA ALTERADO)
+   =========================================================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(42, 27, 61, 0.85);
+  backdrop-filter: blur(25px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(42, 27, 61, 0.3);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* CENTRALIZA */
+  padding: 0 40px;
+  height: 85px;
+  
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  flex-shrink: 0;
+}
+
+.btn-cadastro {
+  background: linear-gradient(135deg, #6B46C1, #553C9A);
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(107, 70, 193, 0.4);
+}
+
+/* Logo */
+.logo {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #FFF;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 10px rgba(107, 70, 193, 0.5);
+  margin-right: 15%;
+}
+
+/* NAV DESKTOP */
+.nav {
+  display: flex;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  margin-left: -10%;
+}
+
+.nav a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  background: rgba(107, 70, 193, 0.2);
+  color: #FFF;
+}
+/* ==============================
+   OVERRIDE MÓVEL SIMPLES E ROBUSTO
+   (funciona com seu Header.jsx)
+   ============================== */
+
+/* garante que hamburger esteja clicável */
+.hamburger {
+  display: none; /* desktop continua igual */
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 9999;
+  position: relative;
+}
+
+/* linhas do ícone */
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: 0.18s ease;
+}
+
+/* ícone X quando ativo */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 769px) {
+  /* Esconde os botões de login/cadastro que ficam dentro do menu mobile */
+  .nav .btn-cadastro {
+    display: none;
+  }
+}
+
+/* MOBILE: esconder o nav padrão e mostrar um nav simples quando .open */
+@media (max-width: 768px) {
+
+  /* mostra o hambúrguer */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Esconde a versão "desktop" do menu (se houver estilos conflitantes) */
+  .nav {
+    display: none !important;
+    
+  }
+
+  /* Versão simples do menu quando OPEN */
+  .nav.open {
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 90px; /* espaço para o header */
+    gap: 20px;
+    background: rgba(42, 27, 61, 0.98);
+    z-index: 9998;
+    overflow-y: auto;
+    margin-left: 50%;
+  }
+
+  .nav.open a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    padding: 12px 24px;
+    width: 100%;
+    text-align: center;
+  }
+
+  
+  /* Mas EXIBE os botões dentro do menu hambúrguer */
+  .nav .btn-cadastro {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
